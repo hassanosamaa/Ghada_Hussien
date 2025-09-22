@@ -21,8 +21,8 @@ const Page = () => {
       <HomePage />
       <Title title={t("MY_SKILLS")} />
       <SkillsPage />
-      <Title title={t("CONTACT")} />
-      <ContactPage />
+      {/* <Title title={t("CONTACT")} /> */}
+      {/* <ContactPage /> */}
       <Footer />
     </div>
   );
