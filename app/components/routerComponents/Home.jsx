@@ -112,7 +112,14 @@ const HomePage = () => {
             flex justify-center
             items-center"
       >
-        <Lottie animationData={space} loop={true} />
+
+        <Lottie
+          animationData={space}
+          loop={true}
+          style={{
+            filter: "grayscale(100%) contrast(200%)",
+          }}
+        />
       </div>
     </div>
   );
