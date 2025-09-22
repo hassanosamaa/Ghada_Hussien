@@ -15,7 +15,7 @@ const LanguageChanger: FC<IProps> = (props) => {
     useEffect(() => {
         document
             .querySelector('html')
-            ?.setAttribute('dir', currentLocale == 'ar' ? 'rtl' : 'ltr');
+            ?.setAttribute('dir', currentLocale == 'fr' ? 'rtl' : 'ltr');
         document
             .querySelector('html')
             ?.setAttribute('lang', currentLocale || 'en');
@@ -29,7 +29,7 @@ const LanguageChanger: FC<IProps> = (props) => {
                 if (currentLocale != 'en') {
                     changeLocale('en');
                 } else {
-                    changeLocale('ar');
+                    changeLocale('fr');
                 }
             }}
         >
