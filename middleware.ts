@@ -10,9 +10,9 @@ export function middleware(request: NextRequest) {
     const localeCookie = request.cookies.get('Next-Locale')?.value;
     if (!localeCookie) {
         const url = request.nextUrl.clone();
-        url.pathname = `/fr${url.pathname !== '/' ? url.pathname : ''}`;
+        url.pathname = `/en${url.pathname !== '/' ? url.pathname : ''}`;
         const response = NextResponse.redirect(url);
-        response.cookies.set('Next-Locale', 'fr', { path: '/' });
+        response.cookies.set('Next-Locale', 'en', { path: '/' });
         return response;
     }
     return I18nMiddleware(request);
