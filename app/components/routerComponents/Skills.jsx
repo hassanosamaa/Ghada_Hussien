@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
 import OneSkill from "../utilitiesComponents/OneSkill";
+import { useI18n } from "@/locales/client";
 
 const SkillsPage = () => {
+  const t = useI18n();
   const skills = [
     {
-      label: "API & Performance Testing",
+      label:  t("APIPerformanceTesting") ,
       value: [
         { name: "Postman", img: "/Postman.png" },
         { name: "Apidog", img: "/Apidog.png" },
@@ -14,7 +16,7 @@ const SkillsPage = () => {
       ],
     },
     {
-      label: "Programming & Automation",
+      label: t("ProgrammingAutomation") ,
       value: [
         { name: "Java", img: "/java.png" },
         { name: "Selenium WebDriver", img: "/se.png" },
@@ -24,7 +26,7 @@ const SkillsPage = () => {
       ],
     },
     {
-      label: "Project & Defect Tracking Tools",
+      label: t("ProjectDefectTrackingTools") ,
       value: [
         { name: "Jira", img: "/Jira.png" },
         { name: "Azure DevOps", img: "/AzureDevOps.png" },
@@ -33,7 +35,7 @@ const SkillsPage = () => {
       ],
     },
     {
-      label: "Databases & Concepts",
+      label: t("DatabasesAndConcepts") ,
       value: [
         { name: "SQL", img: "/SQL.png" },
         { name: "OOP", img: "/OOP.png" },

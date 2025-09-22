@@ -3,12 +3,13 @@
 import Lottie from "lottie-react";
 import contact from "@/lottie/contact.json";
 import { useState } from "react";
+import { useI18n } from "@/locales/client";
 
 const ContactPage = () => {
+  const t = useI18n();
   const [message, setMessage] = useState("");
 
   const handleMessageChange = (event) => {
-    // 👇️ access textarea value
     setMessage(event.target.value);
   };
   return (
@@ -42,7 +43,7 @@ const ContactPage = () => {
           className="text-gray-300
                "
         >
-          Your Message :
+          {t("YourMessage")}
         </label>
         <textarea
           className="w-full 
@@ -55,7 +56,7 @@ const ContactPage = () => {
                
 
                 md:w-[80%]"
-          placeholder="Write . . ."
+          placeholder={t("Write")}
           rows={6}
           id="message"
           name="message"
@@ -64,12 +65,12 @@ const ContactPage = () => {
         ></textarea>
         <button
           className=" 
-                py-[8px] mt-4 rounded-[5px] text-white px-[15px] border border-zinc-600 cursor-pointer mr-auto ml-4 opacity-100 hover:opacity-70  transition duration-300"
+                py-[8px] mt-4 rounded-[5px] text-white px-[15px] border border-zinc-600 cursor-pointer  opacity-100 hover:opacity-70  transition duration-300"
         >
           <a
             href={`mailto:${"ghada.muhussien@gmail.com"}?subject=${"from protofolio"}&body=${message}`}
           >
-            Click to Send an Email
+            {t("ClickToSendAnEmail")}
           </a>
         </button>
       </div>

@@ -4,8 +4,10 @@ import space from "@/lottie/space.json";
 import { motion } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
 import WhatsappIcon from "../icons/WhatsappIcon";
+import { useI18n } from "@/locales/client";
 
 const HomePage = () => {
+  const t = useI18n();
   return (
     <div
       id="about"
@@ -53,7 +55,7 @@ const HomePage = () => {
                     font-bold text-gray-300
                 "
           >
-            Software QA Engineer
+            {t("title")}
           </p>
         </div>
 
@@ -62,15 +64,7 @@ const HomePage = () => {
               
                 "
         >
-          Software Test Engineer with hands-on experience in both manual and
-          automation testing for web and mobile applications. Skilled in
-          creating and executing test cases, identifying bugs, and ensuring
-          product quality through regression, smoke, sanity, exploratory, and UI
-          testing. Proficient in Java, Selenium WebDriver, TestNG, Cucumber,
-          Appium, Postman, Apidog, Swagger, and JMeter, as well as defect
-          tracking tools including Jira, Azure DevOps, Trello, Git, and GitHub.
-          Certified in ISTQB Foundation and Agile Tester, with strong knowledge
-          of SQL, OOP, SDLC, STLC, and Agile/Scrum practices.
+          {t("describe")}
         </p>
         <div
           className="flex 
@@ -99,9 +93,9 @@ const HomePage = () => {
             </i>
           </a>
         </div>
-        <div className=" py-[8px] mt-4 rounded-[5px] px-[15px] border border-zinc-600 cursor-pointer mr-auto ml-4 opacity-100 hover:opacity-70  transition duration-300">
+        <div className=" py-[8px] mt-4 rounded-[5px] px-[15px] border border-zinc-600 cursor-pointer  opacity-100 hover:opacity-70  transition duration-300">
           <a href={""} download="Ghada Hussien cv.pdf">
-            Download My CV
+            {t("DownloadCv")}
           </a>{" "}
         </div>
       </div>

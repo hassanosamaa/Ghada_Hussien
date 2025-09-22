@@ -1,6 +1,8 @@
 import { Github, Linkedin } from "lucide-react";
 import WhatsappIcon from "./icons/WhatsappIcon";
+import { useI18n } from "@/locales/client";
 const Footer = () => {
+  const t= useI18n();
   return (
     <div
       className="
@@ -20,7 +22,7 @@ const Footer = () => {
             w-full 
             md:w-[40%]"
       >
-        Software QA Engineer
+        {t('title')}
       </div>
       <div
         className="flex 
