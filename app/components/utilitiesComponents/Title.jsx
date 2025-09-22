@@ -10,7 +10,7 @@ const Title = ({ title }) => {
             text-gray-200 dark:text-gray-900
             text-[25px] font-bold 
             tracking-wider 
-            border-sky-600
+            border-zinc-600
             dark:border-sky-900
              px-8 pt-16 border-b-4
             pb-4"

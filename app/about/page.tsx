@@ -5,15 +5,20 @@ import ContactPage from "../components/routerComponents/Contact";
 import SkillsPage from "../components/routerComponents/Skills";
 import Title from "../components/utilitiesComponents/Title";
 import { Navigation } from "../components/nav";
+import Particles from "../components/particles";
 
 const Page = () => {
   return (
-    <div >
+    <div>
       <Navigation />
+      <Particles
+        className="absolute inset-0 -z-10 animate-fade-in"
+        quantity={100}
+      />
       <HomePage />
-      <Title title={"My Skills"} />
+      <Title title={"MY SKILLS"} />
       <SkillsPage />
-      <Title title={"Contact "} />
+      <Title title={"CONTACT "} />
       <ContactPage />
     </div>
   );

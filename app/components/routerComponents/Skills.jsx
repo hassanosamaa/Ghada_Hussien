@@ -1,31 +1,83 @@
-import OneSkill from "../utilitiesComponents/Oneskill";
+"use client";
+import { useState } from "react";
+import OneSkill from "../utilitiesComponents/OneSkill";
 
 const SkillsPage = () => {
-  const data = [
-    { name: "Creative Fashion Designer", img: "" },
-    { name: "Designing", img: "" },
-    { name: "Draping ", img: "" },
-    { name: "Pattern Making", img: "" },
-    { name: "Fashion Experience", img: "" },
-    { name: "Sewing & Technical Knowledge", img: "" },
-    { name: "Sketching Designs", img: "" },
-    { name: "Styling", img: "" },
-    { name: "Fabric Design", img: "" },
-    { name: "Trend For Casting", img: "" },
+  const skills = [
+    {
+      label: "API & Performance Testing",
+      value: [
+        { name: "Postman", img: "/Postman.png" },
+        { name: "Apidog", img: "/Apidog.png" },
+        { name: "Swagger", img: "/Swagger.png" },
+        { name: "JMeter", img: "/JMeter.png" },
+      ],
+    },
+    {
+      label: "Programming & Automation",
+      value: [
+        { name: "Java", img: "/java.png" },
+        { name: "Selenium WebDriver", img: "/se.png" },
+        { name: "TestNG", img: "/testNG.png" },
+        { name: "Cucumber", img: "/Cucumber.png" },
+        { name: "Appium", img: "/Appium.png" },
+      ],
+    },
+    {
+      label: "Project & Defect Tracking Tools",
+      value: [
+        { name: "Jira", img: "/Jira.png" },
+        { name: "Azure DevOps", img: "/AzureDevOps.png" },
+        { name: "Trello", img: "/Trello.png" },
+        { name: "Git & GitHub", img: "/Git.png" },
+      ],
+    },
+    {
+      label: "Databases & Concepts",
+      value: [
+        { name: "SQL", img: "/SQL.png" },
+        { name: "OOP", img: "/OOP.png" },
+        { name: "SDLC / STLC", img: "/SDLC.png" },
+      ],
+    },
   ];
+
+  // state for selected category
+  const [selected, setSelected] = useState(skills[0].label);
+  const [data, setData] = useState(skills[0].value);
+
+  const handleSelect = (ele) => {
+    setSelected(ele.label);
+    setData(ele.value);
+  };
+
   return (
-    <div
-      id="skills"
-      className="container mx-auto  
-         px-4 md:p-16
-        grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5
-        place-items-center gap-[25px] md:mt-10
-        pt-8
-         "
-    >
-      {data.map((ele) => (
-        <OneSkill key={ele.name} name={ele.name} img={ele.img} />
-      ))}
+    <div>
+      <div className="flex justify-center items-center gap-[20px] pt-[25px] flex-wrap">
+        {skills.map((ele) => (
+          <button
+            key={ele.label}
+            onClick={() => handleSelect(ele)}
+            className={`text-[14px] md:text-[16px] font-medium p-[10px] px-[15px] border rounded-[12px] transition duration-300
+              ${
+                selected === ele.label
+                  ? "bg-[#333333c4] text-[#ffffffc5] border-[#ffffffa5]"
+                  : "text-[#ffffffac] border-[#333]  hover:text-white"
+              }`}
+          >
+            {ele.label}
+          </button>
+        ))}
+      </div>
+
+      <div
+        id="skills"
+        className="container mx-auto px-4 flex flex-wrap justify-center items-center gap-[25px] mt-10"
+      >
+        {data.map((ele) => (
+          <OneSkill key={ele.name} name={ele.name} img={ele.img} />
+        ))}
+      </div>
     </div>
   );
 };

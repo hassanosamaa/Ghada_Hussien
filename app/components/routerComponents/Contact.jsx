@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Lottie from "lottie-react";
 import contact from "@/lottie/contact.json";
@@ -15,7 +15,7 @@ const ContactPage = () => {
     <div
       id="contact"
       className="
-        container mx-auto p-5  md:h-[80vh]
+        container mx-auto p-5  md:h-[70vh]
         flex flex-col 
         gap-[15px]
         md:gap-[10%]
@@ -46,12 +46,12 @@ const ContactPage = () => {
         </label>
         <textarea
           className="w-full dark:bg-gray-400
-                 outline-none rounded-lg bg-gray-800
+                 outline-none rounded-lg bg-zinc-900/85
                  px-2 py-[4px] placeholder:text-gray-500
                  dark:placeholder:text-gray-900
                  text-gray-200 text-[15px]
-                 border border-sky-800
-                 focus:border focus:border-sky-500
+                 border border-zinc-600
+                 focus:border focus:border-zinc-500
                  dark:text-gray-900
 
                 md:w-[80%]"
@@ -63,11 +63,11 @@ const ContactPage = () => {
           onChange={handleMessageChange}
         ></textarea>
         <button
-          className="btn 
-                border border-sky-500 bg-sky-800 m-2"
+          className=" 
+                py-[8px] mt-4 rounded-[5px] text-white px-[15px] border border-zinc-600 cursor-pointer mr-auto ml-4 opacity-100 hover:opacity-70  transition duration-300"
         >
           <a
-            href={`mailto:${"Amelhelaal0@gmail.com"}?subject=${"from protofolio"}&body=${message}`}
+            href={`mailto:${"ghada.muhussien@gmail.com"}?subject=${"from protofolio"}&body=${message}`}
           >
             Click to Send an Email
           </a>
