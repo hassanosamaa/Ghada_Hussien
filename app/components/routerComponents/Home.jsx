@@ -51,7 +51,7 @@ const HomePage = () => {
                     text-[20px]
                     md:text-[30px]
                     font-bold text-gray-300
-                    dark:text-gray-900"
+                "
           >
             Software QA Engineer
           </p>
@@ -59,7 +59,7 @@ const HomePage = () => {
 
         <p
           className="p-4 text-gray-200 font-extralight
-                dark:text-gray-950
+              
                 "
         >
           Software Test Engineer with hands-on experience in both manual and

@@ -53,7 +53,7 @@ const OneSkill = ({ name, img }) => {
         <img src={img} className="w-full h-full" />
       </div>
       <div
-        className="font-bold dark:text-gray-100 text-[15px]
+        className="font-bold  text-[15px]
           text-gray-300 tracking-wider p-[10px] text-center z-20"
       >
         {name}

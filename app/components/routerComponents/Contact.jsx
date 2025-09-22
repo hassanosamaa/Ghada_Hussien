@@ -40,19 +40,19 @@ const ContactPage = () => {
       >
         <label
           className="text-gray-300
-                dark:text-gray-900"
+               "
         >
           Your Message :
         </label>
         <textarea
-          className="w-full dark:bg-gray-400
+          className="w-full 
                  outline-none rounded-lg bg-zinc-900/85
                  px-2 py-[4px] placeholder:text-gray-500
-                 dark:placeholder:text-gray-900
+                 
                  text-gray-200 text-[15px]
                  border border-zinc-600
                  focus:border focus:border-zinc-500
-                 dark:text-gray-900
+               
 
                 md:w-[80%]"
           placeholder="Write . . ."
