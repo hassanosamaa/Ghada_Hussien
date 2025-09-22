@@ -1,44 +1,35 @@
-'use client';
-import { FC, useEffect } from 'react';
-import { useChangeLocale, useCurrentLocale, useI18n } from '@/locales/client';
-import { useRouter } from 'next/navigation';
-import { LanguageIcon } from './icons/LanguageIcon';
+"use client";
+import { FC, useEffect } from "react";
+import { useChangeLocale, useCurrentLocale, useI18n } from "@/locales/client";
+import { useRouter } from "next/navigation";
+import { LanguageIcon } from "./icons/LanguageIcon";
 
 interface IProps {}
 
 const LanguageChanger: FC<IProps> = (props) => {
-    const currentLocale = useCurrentLocale();
-    const changeLocale = useChangeLocale();
-    const t = useI18n();
+  const currentLocale = useCurrentLocale();
+  const changeLocale = useChangeLocale();
+  const t = useI18n();
+  const router = useRouter();
 
-    const router = useRouter();
-    useEffect(() => {
-        document
-            .querySelector('html')
-            ?.setAttribute('dir', currentLocale == 'fr' ? 'rtl' : 'ltr');
-        document
-            .querySelector('html')
-            ?.setAttribute('lang', currentLocale || 'en');
-        router.refresh();
-    }, [currentLocale]);
-    return (
-        <button
-            className={'flex items-center gap-[5px] language-changer'}
-            aria-label='language-changer'
-            onClick={() => {
-                if (currentLocale != 'en') {
-                    changeLocale('en');
-                } else {
-                    changeLocale('fr');
-                }
-            }}
-        >
-            <LanguageIcon
-                className={
-                    'fill-c_white w-[9px] md:w-[18px] h-[9px] md:h-[18px]'
-                }
-            />
-        </button>
-    );
+  useEffect(() => {
+    document.querySelector("html")?.setAttribute("lang", currentLocale || "en");
+    router.refresh();
+  }, [currentLocale]);
+
+  return (
+    <div className="language-changer-container">
+      <select
+        className="language-select"
+        value={currentLocale}
+        onChange={(e) => changeLocale(e.target.value as "en" | "fr")}
+        aria-label="Language selector"
+      >
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+      </select>
+    </div>
+  );
 };
+
 export default LanguageChanger;
