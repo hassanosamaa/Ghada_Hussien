@@ -1,13 +1,7 @@
 export default {
   title: "Ingénieur QA Logiciel",
-  describe: `Ingénieur test logiciel avec une expérience pratique à la fois en tests manuels
-          et automatisés pour les applications web et mobiles. Compétent dans la
-          création et l’exécution de cas de test, l’identification des bugs et l’assurance
-          de la qualité du produit grâce aux tests de régression, smoke, sanity, exploratoires et UI.
-          Maîtrise de Java, Selenium WebDriver, TestNG, Cucumber,
-          Appium, Postman, Apidog, Swagger et JMeter, ainsi que des outils de suivi des défauts
-          incluant Jira, Azure DevOps, Trello, Git et GitHub.
-          Certifié ISTQB Foundation et Agile Tester, avec une solide connaissance de SQL, OOP, SDLC, STLC et des pratiques Agile/Scrum.`,
+  describe: `Ingénieur Test Logiciel avec une expérience pratique en tests manuels et automatisés pour les applications web et mobiles, et une expertise spécialisée dans l’évaluation de la qualité de l’IA. Compétent dans la création et l’exécution de cas de test complets, l’identification des anomalies, et l’assurance qualité des produits à travers les tests de régression, smoke, sanity, exploratoires, UI, API et performance.
+  Maîtrise de Java, Selenium WebDriver, TestNG, Cucumber, Appium, Postman, Apidog, Swagger et JMeter, avec une expérience dans l’utilisation d’outils de suivi des anomalies tels que Jira, Azure DevOps, Trello, Git et GitHub. Certifié ISTQB Foundation et Agile Tester, avec une solide connaissance de SQL, OOP, SDLC, STLC et des pratiques Agile/Scrum. Reconnu pour fournir un retour structuré, favoriser l’amélioration continue et collaborer efficacement avec des équipes pluridisciplinaires afin de livrer des solutions fiables et de haute qualité.`,
   DownloadCv: "Télécharger mon CV",
   MY_SKILLS: "MES COMPÉTENCES",
   CONTACT: "CONTACT",
